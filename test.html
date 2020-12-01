@@ -2,17 +2,21 @@
 
 <head>
   <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="require.js"></script>
 </head>
 
 <body>
   
   <div id="view"></div>
   <script type="text/javascript">
+    //var json = require('./area-chart.vg.json');
+
     var view;
 
     //fetch('https://vega.github.io/vega/examples/bar-chart.vg.json')
-    fetch('https://raw.githubusercontent.com/arceda/visualization/master/data/area-chart.vg.json')
-    //fetch('data/area-chart.vg.json')
+    //fetch('https://raw.githubusercontent.com/arceda/visualization/master/data/area-chart.vg.json')
+    //fetch(json)
+    fetch('data/area-chart.vg.json')
       .then(res => res.json())
       .then(spec => render(spec))
       .catch(err => console.error(err));

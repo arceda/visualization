@@ -8,7 +8,8 @@
   <script type="text/javascript">
     var view;
 
-    fetch('https://raw.githubusercontent.com/arceda/visualization/master/data/bar_csv.json')
+    //fetch('https://raw.githubusercontent.com/arceda/visualization/master/data/bar_csv.json')
+    fetch('data/lines_csv.json')
       .then(res => res.json())
       .then(spec => render(spec))
       .catch(err => console.error(err));
